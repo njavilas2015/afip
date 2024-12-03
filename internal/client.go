@@ -105,14 +105,3 @@ func GetClient(serviceName string, sandbox bool) (*http.Client, error) {
 
 	return transport.client, nil
 }
-
-func main() {
-
-	client, err := GetClient("wsaa", false)
-
-	if err != nil {
-		log.Fatalf("Error getting client: %v", err)
-	}
-
-	log.Println("Client configured:", client)
-}
